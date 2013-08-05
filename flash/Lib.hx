@@ -104,10 +104,11 @@ class Lib {
 	}
 	
 	
-	public static function getURL(request:URLRequest, target:String = null) {
+	public static function getURL(request:URLRequest, target:String = '_self') {
 		
 		//Browser.document.open(request.url);
-		untyped { document.open(request.url); }
+		//untyped { document.open(request.url); }
+		untyped { window.open(request.url, target); }
 		
 	}
 	
